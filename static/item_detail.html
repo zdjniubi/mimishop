@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/car/bar.css">
+    <link rel="stylesheet" href="css/car/base.css">
+    <link rel="stylesheet" href="css/car/bottom.css">
+    <link rel="stylesheet" href="css/car/item-list.css">
+    <link rel="stylesheet" href="css/car/settlement.css">
+    <link rel="stylesheet" href="css/car/top.css">
+    <link rel="stylesheet" href="css/car/w.css">
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/dropdown.js"></script>
+    <link rel="stylesheet" href="css/mall.css">
+    <style>
+        body{
+            background-color: #fff;
+        }
+    </style>
+    <link href="static/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="static/assets/global/css/components.css" rel="stylesheet" type="text/css"/>
+    <link href="static/assets/admin/pages/css/login.css" rel="stylesheet" type="text/css"/>
+    <script src="static/assets/global/plugins/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="./gethost.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- 顶部导航条 -->
+    <div class="nav">
+        <ul>
+            <li class="nav-pull-down location"><img src="img/icon_location.png"> 珠海</li>
+            <li><a href="#">手机商城</a></li>
+            <li><a href="#">网站导航</a></li>
+            <li><a href="help.html">客户服务</a></li>
+            <li><a href="#">企业采购</a></li>
+            <li><a href="index.html">首页</a></li>
+            <li class="nav-pull-down my-shop"><a href="kill_detail.html">我的砍价</a> <span class="glyphicon glyphicon-menu-down"></span></li>
+            <li class="nav-pull-down my-shop"><a href="car.html">我的购物车</a> <span class="glyphicon glyphicon-menu-down"></span></li>
+            <div id="user_login">
+            </div>
+
+        </ul>
+    </div>
+
+    <!-- 导航条 -->
+    <div class="shop-box">
+        <div class="shop-container">
+            <div class="shop-title">
+                <div class="shop-title-icon">
+                    <i class="fa fa-fire"></i>
+                </div>
+                <div class="shop-title-content">
+                    <p>咪咪商城</p>
+                    <p>The Best Thing For You</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="shop-nav-box">
+        <div class="shop-nav-container">
+            <ul>
+                <li>
+                    <a href="#">首页</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="item-kill-title" id="kill-info">
+        <p> 复制网址邀请新人填写砍价码注册100%享当前商品大额折扣！！！</p>
+
+
+    </div>
+    <!-- 商品信息展示 -->
+    <div class="item-detail-show">
+        <div class="item-detail-left">
+            <div class="item-detail-big-img" id="">
+                <img src="" id="imgUrl"alt="">
+            </div>
+
+            </div>
+
+        <div class="item-detail-right">
+            <div class="item-detail-title">
+                <p id="title"></p>
+            </div>
+
+            <div class="item-detail-tag">
+                <p><span>【满69-20元】</span> <span>【关注产品★送钢化膜】</span> <span>【京配次日达】</span></p>
+            </div>
+            <div class="item-detail-desc">
+                <p id="desc"></p>
+            </div>
+            <div class="item-recommend-title">
+                <p> <label style="color:white" class="control-label" id="promoStartDate"/></p>
+            </div>
+            <div class="item-detail-price-row">
+                <div class="item-price-left">
+                    <div class="item-price-row">
+                        <div class="priceRow">
+                            <p><span class="item-price-title" id="nowprice"></span> <span class="item-price" id="price">￥28.00</span></p>
+                        </div>
+
+
+                    </div>
+                    <div class="item-price-row">
+                        <p>
+                            <span class="item-price-title">优 惠 价</span> 
+                            <span class="item-price-full-cut">满148减10</span>
+                            <span class="item-price-full-cut">满218减20</span>
+                            <span class="item-price-full-cut">满288减30</span>
+                        </p>
+                    </div>
+                    <div class="item-price-row">
+                        <p>
+                            <span class="item-price-title">促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</span>
+                            <span class="item-price-full-cut">跨店满减</span>
+                            <span class="item-price-full-cut">多买优惠</span>
+                        </p>
+                    </div>
+                    <div class="item-price-row">
+                        <p>
+                            <span class="item-price-title">累计销量</span>
+                            <span class="item-price-title" id="sales">1</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item-kill-title" id="kill">
+                <p> 砍价免费拿</p>
+<!--                <img src="https://img2.baidu.com/it/u=2529042964,2463997799&fm=26&fmt=auto&gp=0.jpg" style="width: available">-->
+            </div>
+
+            <button class="btn-add-buy-car btn btn-danger" id="genkill">
+                生成砍价码
+            </button>
+            <p id="code"></p>
+            <div class="add-buy-car-box">
+                <div class="p-quantity" id="option">
+                    <input type="button" class="decrease btn-add-buy-car btn btn-danger" value="-">
+                    <input type="text" class="quantity btn item-remarks-num" value="1"/>
+                    <input type="button" class="increase btn-add-buy-car btn btn-danger" value="+">
+                </div>
+
+<!--                <a href="car.html">-->
+                    <button class="btn-add-buy-car btn btn-danger" id="addCar">
+                        加入购物车
+                    </button>
+                <button class="btn-add-buy-car btn btn-danger" id="buy" style="display: none">
+                    立即秒杀
+                </button>
+<!--                </a>-->
+
+            </div>
+            <div id="success">
+
+            </div>
+        </div>
+    </div>
+    <!-- 商品详细展示 -->
+    <div class="item-intro-show">
+        <div class="item-intro-recommend">
+            <div class="item-recommend-title">
+                <p>店铺热销</p>
+            </div>
+            <div class="item-intro-recommend-column">
+                <div class="item-recommend-column">
+                    <div class="item-recommend-img">
+                        <img src="./img/sidebar/1.jpg" alt="">
+                    </div>
+                    <div class="item-recommend-intro">
+                        <span><span class="item-recommend-top-num">1</span> 热销165077件</span>
+                        <span class="item-recommend-price">￥28.00</span>
+                    </div>
+                </div>
+                <div class="item-recommend-column">
+                    <div class="item-recommend-img">
+                        <img src="./img/sidebar/2.jpg" alt="">
+                    </div>
+                    <div class="item-recommend-intro">
+                        <span><span class="item-recommend-top-num">2</span> 热销112892件</span>
+                        <span class="item-recommend-price">￥36.00</span>
+                    </div>
+                </div>
+                <div class="item-recommend-column">
+                    <div class="item-recommend-img">
+                        <img src="./img/sidebar/3.jpg" alt="">
+                    </div>
+                    <div class="item-recommend-intro">
+                        <span><span class="item-recommend-top-num">3</span> 热销84980件</span>
+                        <span class="item-recommend-price">￥28.00</span>
+                    </div>
+                </div>
+                <div class="item-recommend-column">
+                    <div class="item-recommend-img">
+                        <img src="./img/sidebar/4.jpg" alt="">
+                    </div>
+                    <div class="item-recommend-intro">
+                        <span><span class="item-recommend-top-num">4</span> 热销36051件</span>
+                        <span class="item-recommend-price">￥48.00</span>
+                    </div>
+                </div>
+                <div class="item-recommend-column">
+                    <div class="item-recommend-img">
+                        <img src="./img/sidebar/5.jpg" alt="">
+                    </div>
+                    <div class="item-recommend-intro">
+                        <span><span class="item-recommend-top-num">5</span> 热销20858件</span>
+                        <span class="item-recommend-price">￥25.00</span>
+                    </div>
+                </div>
+                <div class="item-recommend-column">
+                    <div class="item-recommend-img">
+                        <img src="./img/sidebar/6.jpg" alt="">
+                    </div>
+                    <div class="item-recommend-intro">
+                        <span><span class="item-recommend-top-num">6</span> 热销15672件</span>
+                        <span class="item-recommend-price">￥62.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-intro-detail">
+            <div class="item-intro-nav">
+                <ul>
+                    <li>商品介绍</li>
+                    <li>规格包装</li>
+                    <li>售后保障</li>
+                    <li>商品评价(7.5万+)</li>
+                </ul>
+            </div>
+            <div class="item-intro-img">
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="clearfix"></div>
+        <div class="icon-row">
+            <div class="footer-icon">
+                <h5 class="footer-icon-child"></h5>
+                <span class="footer-icon-text">品类齐全，轻松购物</span>
+            </div>
+            <div class="footer-icon">
+                <h5 class="footer-icon-child footer-icon-child-2"></h5>
+                <span class="footer-icon-text">多仓直发，极速配送</span>
+            </div>
+            <div class="footer-icon">
+                <h5 class="footer-icon-child footer-icon-child-3"></h5>
+                <span class="footer-icon-text">正品行货，精致服务</span>
+            </div>
+            <div class="footer-icon">
+                <h5 class="footer-icon-child footer-icon-child-4"></h5>
+                <span class="footer-icon-text">天天低价，畅选无忧</span>
+            </div>
+        </div>
+        <div class="service-intro">
+            <div class="servece-type">
+                <div class="servece-type-info">
+                    <ul>
+                        <li>购物指南</li>
+                        <li>购物流程</li>
+                        <li>会员介绍</li>
+                        <li>生活旅行</li>
+                        <li>常见问题</li>
+                        <li>大家电</li>
+                        <li>联系客服</li>
+                    </ul>
+                </div>
+                <div class="servece-type-info">
+                    <ul>
+                        <li>配送方式</li>
+                        <li>上门自提</li>
+                        <li>211限时达</li>
+                        <li>配送服务查询</li>
+                        <li>配送费收取标准</li>
+                        <li>海外配送</li>
+                    </ul>
+                </div>
+                <div class="servece-type-info">
+                    <ul>
+                        <li>支付方式</li>
+                        <li>货到付款</li>
+                        <li>在线支付</li>
+                        <li>分期付款</li>
+                        <li>邮局汇款</li>
+                        <li>公司转账</li>
+                    </ul>
+                </div>
+                <div class="servece-type-info">
+                    <ul>
+                        <li>售后服务</li>
+                        <li>售后政策</li>
+                        <li>价格保护</li>
+                        <li>退款说明</li>
+                        <li>返修/退换货</li>
+                        <li>取消订单</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="friend-link">
+                <div class="friend-link-item">
+                    <ul>
+                        <li><span class="link-item">关于我们</span></li>
+                        <li><span class="link-item">联系我们</span></li>
+                        <li><span class="link-item">联系客服</span></li>
+                        <li><span class="link-item">合作招商</span></li>
+                        <li><span class="link-item">商家帮助</span></li>
+                        <li><span class="link-item">营销中心</span></li>
+                        <li><span class="link-item">销售联盟</span></li>
+                        <li><span class="link-item">校园社区</span></li>
+                        <li><span class="link-item">风险监测</span></li>
+                        <li><span class="link-item link-last-item">隐私政策</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="copyright">
+                <p>Copyright © 2017 BY Gavin 咪咪商城</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">
+    $('.item-detail-img-small img').hover(function () {
+        $('.item-detail-big-img img').attr('src', $(this).attr('src'));
+    });
+</script>
+
+<script>
+    initView();
+    setInterval(countdown,1000);
+    var user;
+
+    var kill = document.getElementById('kill');
+    var info = document.getElementById('kill-info');
+    kill.onmouseover = function(){
+        // info.delay(6000).hide(0);
+        info.style.display = 'block';
+    }
+    kill.onmouseout = function(){
+        info.style.display = 'none';
+    }
+
+
+    $.ajax({
+        type: "GET",
+        url: "http://" + g_host + "/user/check",
+        data: {
+            "token" : window.localStorage.getItem("token")
+        },
+
+        xhrFields: {withCredentials: true},
+        success: function (data) {
+            var dom = "";
+            if (data.data != null) {
+                dom = "<li class='login-signup'>你好，" +data.data.name+"</li>";
+                user = data.data;
+            } else {
+                dom = "<li class='login-signup'>你好，请<a href='login.html'>登录 </a><span class='text-color-red'>" +
+                    "<ahref='signup.html'>免费注册</a></span></li>";
+            }
+            $("#user_login").append($(dom));
+
+        }
+    });
+    function getParam(paramName) {
+        paramValue = "", isFound = !1;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {
+            arrSource = unescape(this.location.search).substring(1, this.location.search.length).split("&"), i = 0;
+            while (i < arrSource.length && !isFound) arrSource[i].indexOf("=") > 0 && arrSource[i].split("=")[0].toLowerCase() == paramName.toLowerCase() && (paramValue = arrSource[i].split("=")[1], isFound = !0), i++
+        }
+        return paramValue == "" && (paramValue = null), paramValue
+    }
+    var dom = "";
+    var g_itemVO = {};
+
+    function hasInit(){
+        var isInit = $("#isInit").val();
+        return isInit;
+    }
+
+    function setHasInit(){
+        $("#isInit").val("1");
+    }
+
+    function initView(){
+        var isInit = hasInit();
+        if(isInit == "1"){
+            return;
+        }
+        //获取商品详情
+        $.ajax({
+            type:"GET",
+            url:"http://"+g_host+"/item/get",
+            data:{
+                "id":getParam("id"),
+            },
+            xhrFields:{withCredentials:true},
+            success:function(data){
+                if(data.status == "success"){
+                    g_itemVO = data.data;
+                    reloadDom();
+
+                    //setInterval(reloadDom,1000);
+                    dom="";
+                    setHasInit();
+                }else{
+                    alert("获取信息失败，原因为"+data.data.errMsg);
+                }
+            },
+            error:function(data){
+                alert("获取信息失败，原因为"+data.responseText);
+            }
+        });
+    }
+
+    jQuery(document).ready(function(){
+        $("#buy").on("click",function(){
+            var token = window.localStorage["token"];
+            $.ajax({
+                type:"POST",
+                contentType:"application/x-www-form-urlencoded",
+                url:"http://"+g_host+"/order/generatetoken",
+                data:{
+                    "itemId":g_itemVO.id,
+                    "promoId":g_itemVO.promoId,
+                    "token":token
+                },
+                xhrFields:{withCredentials:true},
+                success:function(data){
+                    if(data.status == "success"){
+                        var promoToken = data.data;
+                        $.ajax({
+                            type:"POST",
+                            contentType:"application/x-www-form-urlencoded",
+                            url:"http://"+g_host+"/order/createorder?token="+token,
+                            data:{
+                                "itemId":g_itemVO.id,
+                                "amount":1,
+                                "promoId":g_itemVO.promoId,
+                                "promoToken":promoToken
+                            },
+                            xhrFields:{withCredentials:true},
+                            success:function(data){
+                                if(data.status == "success"){
+                                    alert("下单成功");
+                                    window.location.reload();
+                                }else{
+                                    alert("下单失败，原因为"+data.data.errMsg);
+                                    if(data.data.errCode == 20003){
+                                        window.location.href="login.html";
+                                    }
+                                }
+                            },
+                            error:function(data){
+                                alert("下单失败，原因为"+data.responseText);
+                            }
+                        });
+
+
+                    }else{
+                        alert("获取令牌失败，原因为"+data.data.errMsg);
+                        if(data.data.errCode == 20003){
+                            window.location.href="login.html";
+                        }
+                    }
+                },
+                error:function(data){
+                    alert("获取令牌失败，原因为"+data.responseText);
+                }
+            });
+
+        });
+        // $("#buy").on("click",function(){
+        //     var token = window.localStorage["token"];
+        //     if(token == null){
+        //         alert("没有登录，不能下单");
+        //         window.location.href="login.html";
+        //         return false;
+        //     }
+        //
+        //     $.ajax({
+        //         type:"POST",
+        //         contentType:"application/x-www-form-urlencoded",
+        //         url:"http://"+g_host+"/order/createorder?token="+token,
+        //         data:{
+        //             "itemId":g_itemVO.id,
+        //             "amount":1,
+        //             "promoId":g_itemVO.promoId
+        //         },
+        //         xhrFields:{withCredentials:true},
+        //         success:function(data){
+        //             if(data.status == "success"){
+        //                 alert("下单成功");
+        //                 window.location.reload();
+        //             }else{
+        //                 alert("下单失败，原因为"+data.data.errMsg);
+        //                 if(data.data.errCode == 20003){
+        //                     window.location.href="login.html";
+        //                 }
+        //             }
+        //         },
+        //         error:function(data){
+        //             alert("下单失败，原因为"+data.responseText);
+        //         }
+        //     });
+        //     initView();
+        //
+        // });
+
+        $("#genkill").on("click",function(){
+
+            if(user == null) {
+                window.location.href="login.html";
+            }
+
+            $.ajax({
+                type:"POST",
+                contentType:"application/x-www-form-urlencoded",
+                url:"http://"+g_host+"/item/gendiscount",
+                data:{
+                    "itemId":g_itemVO.id,
+                    "userId":user.id,
+                },
+                xhrFields:{withCredentials:true},
+                success:function(data){
+                    if(data.status == "success"){
+
+                        document.getElementById('kill').innerText = data.data
+                    }else{
+
+                    }
+                },
+                error:function(data){
+                    alert("下单失败，原因为"+data.responseText);
+                }
+            });
+        })
+
+    });
+
+    function reloadDom(){
+        info.style.display = 'none';
+        var detailImages = [];
+        if (g_itemVO.promoStatus === 2) {
+            document.getElementById( "option").style.display= "none";
+
+            document.getElementById("buy").style.display="block";
+            document.getElementById("addCar").style.display="none";
+
+        }
+        if (g_itemVO.detailImages.length > 0) {
+            detailImages = g_itemVO.detailImages;
+        }
+
+
+        for (var i = 0; i < detailImages.length; i++) {
+            dom +=
+                "<img src='"+detailImages[i]+"'alter=''>"+
+                "</div>";
+        }
+        $(".item-intro-img").append(dom);
+
+
+        $("#description").text(g_itemVO.description);
+        $("#stock").text(g_itemVO.stock);
+        if (g_itemVO.promoStatus === 2) {
+            $("#title").append("<span class=\"item-detail-express\">秒杀商品</span>" + g_itemVO.title)
+            $("#price").text("￥" + g_itemVO.promoPrice);
+            $("#nowprice").text("秒杀价格");
+            $(".priceRow").append("<p><span class='item-price-title'>原价</span> <span class='item-old-price'>￥"+g_itemVO.price+"</span></p>");
+            $("#desc").text(g_itemVO.description);
+            $("#sales").text(g_itemVO.sales);
+
+        } else {
+            $("#price").text("￥" + g_itemVO.price );
+            $("#title").text(g_itemVO.title);
+            $("#desc").text(g_itemVO.description)
+        }
+
+        $("#imgUrl").attr("src",g_itemVO.imgUrl);
+        $("#sales").text(g_itemVO.sales);
+        setInterval(countdown(),1000);
+    }
+
+    function countdown() {
+        if(g_itemVO.promoStatus == 1){
+            //秒杀活动还未开始
+            var startTime = g_itemVO.startDate.replace(new RegExp("-","gm"),"/");
+            startTime = (new Date(startTime)).getTime();
+            var nowTime = Date.parse(new Date());
+            var delta = (startTime - nowTime);
+
+            if(delta <= 0){
+                //活动开始了
+                g_itemVO.promoStatus = 2;
+                reloadDom();
+            }
+            $("#promoStartDate").text("秒杀活动将于： "+g_itemVO.startDate+" 开始售卖 倒计时："+delta+" 秒");
+            $("#promoPrice").text(g_itemVO.promoPrice);
+
+            $("#createorder").attr("disabled",true);
+        }else if(g_itemVO.promoStatus == 2){
+            //秒杀活动正在进行中
+            var endTime = g_itemVO.endDate.replace(new RegExp("-","gm"),"/");
+            endTime = (new Date(endTime)).getTime();
+            var nowTime = Date.parse(new Date());
+            var date3=endTime - nowTime //时间差的毫秒
+            //计算出相差天数
+            var days=Math.floor(date3/(24*3600*1000))
+            //计算出小时数
+            var leave1=date3%(24*3600*1000)  //计算天数后剩余的毫秒数
+            var hours=Math.floor(leave1/(3600*1000))
+            //计算相差分钟数
+            var leave2=leave1%(3600*1000)    //计算小时数后剩余的毫秒数
+            var minutes=Math.floor(leave2/(60*1000))
+            //计算相差秒数
+            var leave3=leave2%(60*1000)   //计算分钟数后剩余的毫秒数
+            var seconds=Math.round(leave3/1000)
+            var delta = days+"天 "+hours+"小时 "+minutes+" 分钟"+seconds+" 秒"
+
+
+            $("#promoStartDate").text("秒杀活动将于： "+delta+" 后结束");
+            $("#promoPrice").text(g_itemVO.promoPrice);
+
+            $("#createorder").attr("disabled",false);
+            $("#normalPriceContainer").hide();
+        }
+    }
+    var submit=document.getElementById("addCar");
+    submit.onclick = function () {
+        var count = document.getElementsByClassName("quantity")[0].value;
+        var itemId = g_itemVO.id;
+        if (user == null) {
+            alert("未登录....")
+            window.location.href="login.html";
+        } else {
+            $.ajax({
+                type:"POST",
+                contentType:"application/x-www-form-urlencoded",
+                url:"http://"+g_host+"/car/create",
+                data:{
+                    "itemId":itemId,
+                    "count":count,
+                    "userId":user.id
+                },
+                xhrFields:{withCredentials:true},
+                success:function(data){
+                    if(data.status == "添加成功"){
+                        $("#success").append("\t<div class=\"add-info-box-container\">\n" +
+                            "\t\t<div class=\"add-info-box\">\n" +
+                            "\t\t\t<div class=\"add-info-detail\">\n" +
+                            "\t\t\t\t<div class=\"add-info-title\">\n" +
+                            "\t\t\t\t\t<p> <i class=\"fa fa-check-circle\"></i> 商品已成功加入购物车！</p>\n" +
+                            "\t\t\t\t</div>\n" +
+                            "\t\t\t\t<div class=\"add-info-box-row\">\n" +
+                            "\t\t\t\t\t<div class=\"add-info-img\">\n" +
+                            "\t\t\t\t\t\t<img src='"+g_itemVO.imgUrl+"'>\n" +
+                            "\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t<div class=\"add-info-intro\">\n" +
+                            "\t\t\t\t\t\t<p>"+g_itemVO.title+"</p>\n" +
+                            "\t\t\t\t\t\t<p class=\"add-info-intro-detail\">数量："+count+"</p>\n" +
+                            "\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t</div>\n" +
+                            "\t\t\t</div>\n" +
+                            "\t\t\t<div class=\"car-btn-group\">\n" +
+                            "\t\t\t\t<div></div>\n" +
+                            "\t\t\t\t\t<a href=\"car.html\"><button class=\"btn-car btn-car-to-pay\">去购物车结算 > </button></a>\n" +
+                            "\t\t\t\t</div>\n" +
+                            "\t\t\t</div>\n" +
+                            "\t\t</div>\n" +
+                            "\t</div>");
+                        //window.location.reload();
+                    }else{
+
+                    }
+                },
+            });
+        }
+
+    }
+
+
+</script>
+</html>

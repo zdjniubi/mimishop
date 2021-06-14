@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>咪咪商城</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/mall.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link href="static/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="static/assets/global/css/components.css" rel="stylesheet" type="text/css"/>
+    <link href="static/assets/admin/pages/css/login.css" rel="stylesheet" type="text/css"/>
+    <script src="static/assets/global/plugins/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="./gethost.js" type="text/javascript"></script>
+</head>
+<style>
+    .header{
+        width: 100%;
+        height: 50px;
+        background-color: #9966CC;
+        font-size: 26px;
+        color: #fff;
+        line-height: 50px;
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+</style>
+<body>
+<!-- 顶部导航条 -->
+<div class="nav">
+    <ul>
+        <li class="nav-pull-down location"><img src="img/icon_location.png"> 珠海</li>
+        <li><a href="#">手机商城</a></li>
+        <li><a href="#">网站导航</a></li>
+        <li><a href="help.html">客户服务</a></li>
+        <li><a href="#">企业采购</a></li>
+        <li><a href="index.html">首页</a></li>
+
+        <li><a href="getotp.html">注册新用户</a></li>
+        <li><a href="login.html">登陆新用户</a></li>
+        <li class="nav-pull-down my-shop"><a href="kill_detail.html">我的砍价</a> <span class="glyphicon glyphicon-menu-down"></span></li>
+        <li class="nav-pull-down my-shop"><a href="car.html">我的购物车</a> <span class="glyphicon glyphicon-menu-down"></span></li>
+        <div id="user_login">
+        </div>
+
+    </ul>
+</div>
+<!-- 内容主题 -->
+<div class="container">
+    <!-- 搜索框 -->
+    <div class="search">
+        <div class="search-body">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="输入你想要的商品">
+                <span class="input-group-btn">
+			        <a href="search.html"><button class="btn btn-danger btn-search" type="button"><i
+                            class="fa fa-search"></i></button></a>
+			      </span>
+            </div>
+            <div class="search-keyword">
+                <p>买2免1 领500神券 199减100 服装 ups电源 虎牌 母婴5折抢 取暖器 手机</p>
+            </div>
+        </div>
+    </div>
+    <!-- 横向导航 -->
+    <div class="nav-item">
+        <ul>
+            <li><a href="#">秒杀</a></li>
+            <li><a href="#">优惠券</a></li>
+            <li><a href="#">闪购</a></li>
+            <li><a href="#">拍卖</a></li>
+            <li><a href="#">服装城</a></li>
+            <li><a href="#">超市</a></li>
+            <li><a href="#">生鲜</a></li>
+            <li><a href="#">全球购</a></li>
+            <li><a href="#">金融</a></li>
+        </ul>
+    </div>
+    <div class="nav-body">
+        <!-- 侧边导航 -->
+        <div class="nav-side">
+            <ul>
+                <li><span class="nav-side-item">家用电器</span></li>
+                <li><span class="nav-side-item">手机</span> / <span class="nav-side-item">运营商</span> / <span
+                        class="nav-side-item">数码</span></li>
+                <li><span class="nav-side-item">电脑</span> / <span class="nav-side-item">办公</span></li>
+                <li><span class="nav-side-item">家居</span> / <span class="nav-side-item">家具</span> / <span
+                        class="nav-side-item">家装</span> / <span class="nav-side-item">厨具</span></li>
+                <li><span class="nav-side-item">男装</span> / <span class="nav-side-item">女装</span> / <span
+                        class="nav-side-item">童装</span> / <span class="nav-side-item">内衣</span></li>
+                <li><span class="nav-side-item">美妆个护</span> / <span class="nav-side-item">宠物</span></li>
+                <li><span class="nav-side-item">女鞋</span> / <span class="nav-side-item">箱包</span> / <span
+                        class="nav-side-item">钟表</span> / <span class="nav-side-item">珠宝</span></li>
+                <li><span class="nav-side-item">男鞋</span> / <span class="nav-side-item">运动</span> / <span
+                        class="nav-side-item">户外</span></li>
+                <li><span class="nav-side-item">汽车</span> / <span class="nav-side-item">汽车用品</span></li>
+                <li><span class="nav-side-item">母婴</span> / <span class="nav-side-item">玩具乐器</span></li>
+                <li><span class="nav-side-item">食品</span> / <span class="nav-side-item">酒类</span> / <span
+                        class="nav-side-item">生鲜</span> / <span class="nav-side-item">特产</span></li>
+                <li><span class="nav-side-item">礼品鲜花</span> / <span class="nav-side-item">农资绿植</span></li>
+                <li><span class="nav-side-item">医药保健</span> / <span class="nav-side-item">计生情趣</span></li>
+                <li><span class="nav-side-item">图书</span> / <span class="nav-side-item">音像</span> / <span
+                        class="nav-side-item">电子书</span></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <!-- 幻灯片 -->
+            <div class="slide">
+                <img class="carousel_img" src="img/1.jpg" name="1">
+                <img class="carousel_img" src="img/2.jpg" name="2">
+                <img class="carousel_img" src="img/3.jpg" name="3">
+                <img class="carousel_img" src="img/4.jpg" name="4">
+                <img class="carousel_img" src="img/5.jpg" name="5">
+                <div class="icon">
+                    <i name="1" class="fa fa-circle"></i>
+                    <i name="2" class="fa fa-circle"></i>
+                    <i name="3" class="fa fa-circle"></i>
+                    <i name="4" class="fa fa-circle"></i>
+                    <i name="5" class="fa fa-circle"></i>
+                </div>
+                <div class="prev prevNext" onclick="PrevNextClick(1)"><span
+                        class="glyphicon glyphicon-menu-left"></span></div>
+                <div class="next prevNext" onclick="PrevNextClick(2)"><span
+                        class="glyphicon glyphicon-menu-right"></span></div>
+            </div>
+            <div class="nav-show">
+                <div class="nav-show-img"><img src="img/nav_showimg1.jpg"></div>
+                <div class="nav-show-img"><img src="img/nav_showimg2.jpg"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 商品显示区域 -->
+    <div class="content">
+        <!-- 秒杀 -->
+        <div class="seckill">
+            <div class="item">
+
+
+            <!-- 头部 -->
+            <div class="seckill-head">
+                <div class="seckill-text">
+                    <span class="seckill-title">限时秒杀</span>
+                    <span class="seckill-remarks">总有你想不到的低价</span>
+                </div>
+                <div class="count-down">
+                    <span class="count-down-text">当前场次</span>
+                    <span class="count-down-num count-down-hour">00</span>
+                    <span class="count-down-point">:</span>
+                    <span class="count-down-num count-down-minute">56</span>
+                    <span class="count-down-point">:</span>
+                    <span class="count-down-num count-down-seconds">00</span>
+                    <span class="count-down-text">后结束抢购</span>
+                </div>
+            </div>
+            <!-- 内容 -->
+            <div class="seckill-content">
+            </div>
+            </div>
+        </div>
+
+        <div class="normal">
+            <div class="item">
+
+
+            <!-- 头部 -->
+            <div class="normal-head">
+                <div class="seckill-text">
+                    <span class="seckill-title">品牌专场</span>
+                    <span class="seckill-remarks">大牌低价，火拼继续</span>
+                </div>
+            </div>
+            <div class="seckill-content2">
+            </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+<script>
+    //定义全局商品数组信息
+    var g_itemList = [];
+    var g_normal_itemList = [];
+    jQuery(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "http://" + g_host + "/item/list_promo",
+            xhrFields: {withCredentials: true},
+            success: function (data) {
+                if (data.status == "success") {
+                    g_itemList = data.data;
+                    reloadDomMiaosha();
+                } else {
+                    alert("获取商品信息失败，原因为" + data.data.errMsg);
+                }
+            },
+            error: function (data) {
+                alert("获取商品信息失败失败，原因为" + data.responseText);
+            }
+        });
+        $.ajax({
+            type: "GET",
+            url: "http://" + g_host + "/item/list",
+            xhrFields: {withCredentials: true},
+            success: function (data) {
+                if (data.status == "success") {
+                    g_normal_itemList = data.data;
+                    reloadDomNormal();
+                } else {
+                    alert("获取商品信息失败，原因为" + data.data.errMsg);
+                }
+            },
+            error: function (data) {
+                alert("获取商品信息失败失败，原因为" + data.responseText);
+            }
+        });
+        $.ajax({
+            type: "GET",
+            url: "http://" + g_host + "/user/check",
+            data: {
+                "token" : window.localStorage.getItem("token")
+            },
+
+            xhrFields: {withCredentials: true},
+            success: function (data) {
+                var dom = "";
+                if (data.data != null) {
+                    dom = "<li class='login-signup'>你好，" +data.data.name+"</li>";
+                } else {
+                    dom = "<li class='login-signup'>你好，请<a href='login.html'>登录 </a><span class='text-color-red'>" +
+                        "<ahref='signup.html'>免费注册</a></span></li>";
+                }
+                $("#user_login").append($(dom));
+
+            }
+        });
+    });
+
+    function reloadDomMiaosha() {
+        for (var i = 0; i < g_itemList.length; i++) {
+            var itemVO = g_itemList[i];
+            var dom = "<div data-id='" + itemVO.id + "' id='itemDetail" + itemVO.id + "'>" +
+                "<div class='item-row'>" +
+                "<div class='item-show-info'>"+
+                "<div class='seckill-item-img'>"+
+                "<img src='" + itemVO.imgUrl + "'>"+
+                "</div>" +
+                "<div class='item-show-price'>" +
+                "<span>" +
+                "<i class='fa fa-rmb text-danger'></i>" +
+                "<span class='seckill-price text-danger'>"+ itemVO.promoPrice +"</span>" +
+                "</span>" +
+                "<i class='fa fa-rmb'></i><span class='seckill-old-price'></span><s>" + itemVO.price + "</s>"+
+                "</div>" +
+                "<div class='item-show-detail'>"+
+                "<span>"+itemVO.title+"</span>"+
+                "</div>" +
+                "<div class='item-show-num'>"+
+                "已有"+
+                "<span>"+itemVO.sales+"</span>人购买"+
+                "</div>"+
+                "<div class='item-show-seller'>"+
+                "<span>咪咪商城</span>" +
+            "</div>"+
+            "</div>"+
+            "</div>";
+
+
+            $(".seckill-content").append($(dom));
+
+            $("#itemDetail" + itemVO.id).on("click", function (e) {
+                window.location.href = "item_detail.html?id=" + $(this).data("id");
+            });
+
+        }
+
+
+    }
+    function reloadDomNormal() {
+        for (var i = 0; i < g_normal_itemList.length; i++) {
+            var itemVO = g_normal_itemList[i];
+            var dom2 = "<div data-id='" + itemVO.id + "' id='itemDetail" + itemVO.id + "'>" +
+                // "<div class='seckill-item'>" +
+                // "<div class='seckill-item-img'>" +
+                // "<img src='" + itemVO.imgUrl + "'>" +
+                // "</div>" +
+                // "<div class='seckill-item-info'>" +
+                // "<p>" + itemVO.title + "<br>" +
+                // "</div>" +
+                // "<p><i class='fa fa-rmb text-danger'></i><span class='seckill-price text-danger'>" + itemVO.price + "</span>" + "</p>" +
+                // "</div>"
+                "<div class='item-row'>" +
+                "<div class='item-show-info'>"+
+                "<div class='seckill-item-img'>"+
+                "<img src='" + itemVO.imgUrl + "'>"+
+                "</div>" +
+                "<div class='item-show-price'>" +
+                "<span>" +
+                "<i class='fa fa-rmb text-danger'></i>" +
+                "<span class='seckill-price text-danger'>"+ itemVO.price +"</span>" +
+                "</span>" +
+                "</div>" +
+                "<div class='item-show-detail'>"+
+                "<span>"+itemVO.title+"</span>"+
+                "</div>" +
+                "<div class='item-show-num'>"+
+                "已有"+
+                "<span>"+itemVO.sales+"</span>人购买"+
+                "</div>"+
+                "<div class='item-show-seller'>"+
+                "<span>咪咪商城</span>" +
+                "</div>"+
+                "</div>"+
+                "</div>";
+
+            $(".seckill-content2").append($(dom2));
+
+            $("#itemDetail" + itemVO.id).on("click", function (e) {
+                window.location.href = "item_detail.html?id=" + $(this).data("id");
+            });
+
+        }
+    }
+
+
+</script>
+<script src="js/mall.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b6a48a65-61ef-4fe6-a733-f8fa575f5482" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1rSWx2OW4OJdiTDGvS7hr0wBHZO" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css/car2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\个人项目\Mall-master\css\car2" />
+      <recent name="D:\个人项目\Mall-master" />
+      <recent name="D:\个人项目\Mall-master\js" />
+      <recent name="D:\个人项目\Mall-master\css\car" />
+      <recent name="D:\个人项目\Mall-master\static" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Mall-master/car.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.car.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6a48a65-61ef-4fe6-a733-f8fa575f5482" name="Default Changelist" comment="" />
+      <created>1618970213735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618970213735</updated>
+      <workItem from="1618970217013" duration="2074000" />
+      <workItem from="1619057739674" duration="1859000" />
+      <workItem from="1619148833799" duration="5590000" />
+      <workItem from="1619587564158" duration="7302000" />
+      <workItem from="1619751236901" duration="3556000" />
+      <workItem from="1619955999883" duration="16476000" />
+      <workItem from="1620440966258" duration="39994000" />
+      <workItem from="1620972363385" duration="1826000" />
+      <workItem from="1621043514899" duration="601000" />
+      <workItem from="1621068601389" duration="6312000" />
+      <workItem from="1621498536918" duration="1193000" />
+      <workItem from="1622079480786" duration="6622000" />
+      <workItem from="1622166791011" duration="6673000" />
+      <workItem from="1622195176053" duration="22624000" />
+      <workItem from="1622424227141" duration="3378000" />
+      <workItem from="1622694125418" duration="5081000" />
+      <workItem from="1622990413610" duration="25117000" />
+      <workItem from="1623080373917" duration="1794000" />
+      <workItem from="1623204474165" duration="2094000" />
+      <workItem from="1623342036365" duration="2679000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

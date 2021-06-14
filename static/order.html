@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的订单</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/mall.css">
+    <link rel="stylesheet" href="css/car2/base.css">
+    <link rel="stylesheet" href="css/car2/top.css">
+    <link rel="stylesheet" href="css/car2/w.css">
+    <link rel="stylesheet" href="css/car2/bar.css">
+    <link rel="stylesheet" href="css/car2/item-list.css">
+    <link rel="stylesheet" href="css/car2/settlement.css">
+    <link rel="stylesheet" href="css/car2/bottom.css">
+    <script type="text/javascript" src="js/dropdown.js"></script>
+
+	<script src="./gethost.js" type="text/javascript"></script>
+    <style>
+        body {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+<!-- 顶部导航条 -->
+<div class="nav">
+    <ul>
+        <li class="nav-pull-down location">
+            <img src="img/icon_location.png"> 送至珠海
+        </li>
+        <li>
+            <a href="#">手机商城</a>
+        </li>
+        <li>
+            <a href="#">网站导航</a>
+        </li>
+        <li>
+            <a href="help.html">客户服务</a>
+        </li>
+        <li>
+            <a href="#">企业采购</a>
+        </li>
+        <li>
+            <a href="index.html">首页</a>
+        </li>
+        <li class="nav-pull-down my-shop"><a href="kill_detail.html">我的砍价</a> <span class="glyphicon glyphicon-menu-down"></span></li>
+        <li class="nav-pull-down my-shop"><a href="car.html">我的购物车</a> <span class="glyphicon glyphicon-menu-down"></span></li>
+        <div id="user_login">
+        </div>
+    </ul>
+</div>
+<!-- 导航条 -->
+<!-- 导航栏 -->
+
+
+<div class="bar">
+    <div class="t-goods">商品</div>
+    <div class="t-shop">订单号</div>
+    <div class="t-price">单价</div>
+    <div class="t-quantity">数量</div>
+    <div class="t-sum">砍价折扣</div>
+    <div class="t-action">价格 &nbsp &nbsp &nbsp &nbsp &nbsp 参与活动</div>
+
+</div>
+
+<div class="item-list" id="item-list">
+
+</div>
+
+
+
+<!-- 底部 -->
+<footer class="footer">
+    <div class="clearfix"></div>
+    <div class="icon-row">
+        <div class="footer-icon">
+            <h5 class="footer-icon-child"></h5>
+            <span class="footer-icon-text">品类齐全，轻松购物</span>
+        </div>
+
+        <div class="footer-icon">
+            <h5 class="footer-icon-child footer-icon-child-2"></h5>
+            <span class="footer-icon-text">多仓直发，极速配送</span>
+        </div>
+        <div class="footer-icon">
+            <h5 class="footer-icon-child footer-icon-child-3"></h5>
+            <span class="footer-icon-text">正品行货，精致服务</span>
+        </div>
+        <div class="footer-icon">
+            <h5 class="footer-icon-child footer-icon-child-4"></h5>
+            <span class="footer-icon-text">天天低价，畅选无忧</span>
+        </div>
+    </div>
+    <div class="service-intro">
+        <div class="servece-type">
+            <div class="servece-type-info">
+                <ul>
+                    <li>购物指南</li>
+                    <li>购物流程</li>
+                    <li>会员介绍</li>
+                    <li>生活旅行</li>
+                    <li>常见问题</li>
+                    <li>大家电</li>
+                    <li>联系客服</li>
+                </ul>
+            </div>
+            <div class="servece-type-info">
+                <ul>
+                    <li>配送方式</li>
+                    <li>上门自提</li>
+                    <li>211限时达</li>
+                    <li>配送服务查询</li>
+                    <li>配送费收取标准</li>
+                    <li>海外配送</li>
+                </ul>
+            </div>
+            <div class="servece-type-info">
+                <ul>
+                    <li>支付方式</li>
+                    <li>货到付款</li>
+                    <li>在线支付</li>
+                    <li>分期付款</li>
+                    <li>邮局汇款</li>
+                    <li>公司转账</li>
+                </ul>
+            </div>
+            <div class="servece-type-info">
+                <ul>
+                    <li>售后服务</li>
+                    <li>售后政策</li>
+                    <li>价格保护</li>
+                    <li>退款说明</li>
+                    <li>返修/退换货</li>
+                    <li>取消订单</li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="friend-link">
+            <div class="friend-link-item">
+                <ul>
+                    <li><span class="link-item">关于我们</span></li>
+                    <li><span class="link-item">联系我们</span></li>
+                    <li><span class="link-item">联系客服</span></li>
+                    <li><span class="link-item">合作招商</span></li>
+                    <li><span class="link-item">商家帮助</span></li>
+                    <li><span class="link-item">营销中心</span></li>
+                    <li><span class="link-item">销售联盟</span></li>
+                    <li><span class="link-item">校园社区</span></li>
+                    <li><span class="link-item">风险监测</span></li>
+                    <li><span class="link-item link-last-item">隐私政策</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="copyright">
+            <p>Copyright © 2017 BY Gavin 咪咪商城</p>
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+	var order_list = [];
+	jQuery(document).ready(function(){
+        var token = window.localStorage["token"];
+
+        $.ajax({
+            type:"GET",
+            contentType:"application/x-www-form-urlencoded",
+            url:"http://"+g_host+"/order/getOrders",
+            data:{
+                "token":token
+            },
+            xhrFields:{withCredentials:true},
+            async : false,
+            success:function(data){
+                if(data.status == "success"){
+                    console.log("order_list get success!");
+                    order_list = data.data;
+                    console.log(order_list)
+                    reload();
+                }
+            },
+        });
+	});
+	function reload() {
+        var dom = "";
+        if (order_list.length == 0) {
+            alert("没有订单...")
+        }
+        for (var i = 0; i < order_list.length; i++) {
+            console.log(order_list[i]);
+            var discount = "";
+            var promoName = "";
+            if (order_list[i].discount == null) {
+                discount = 0.0
+            } else {
+                discount = order_list[i].discount;
+            }
+
+            if (order_list[i].promoName == null) {
+                promoName = "未参与活动"
+            } else {
+                promoName = order_list[i].promoName;
+            }
+            dom +=
+        "<div class='item'>" +
+                "<div class='p-goods'>"+
+                "<div data-id='" + order_list[i].itemId + "' id='itemDetail" + order_list[i].itemId + "'>"+
+                "<div class='p-img'><img src='"+order_list[i].itemImg+"'></div>"+
+                "</div>"+
+                "<div class='p-name'>"+order_list[i].itemName+"</div>"+
+                "</div>"+
+
+                "<div class='p-price'>"+order_list[i].id+"<span class='onlyPrice'></span></div>"+
+            "<div class='p-shop'>￥"+order_list[i].itemPrice+"</div>"+
+
+                "<div class='p-shop'>"+order_list[i].amount+"</div>"+
+                "<div class='p-sum'>￥"+discount+"<span class='onlySum'></span></div>"+
+                "<div class='p-sum'>￥"+order_list[i].orderPrice+"<span class='onlySum'></span></div>"+
+
+
+
+            "<div class='p-sum'>"+promoName+"<span class='onlySum'></span></div>"+
+            "</div>"
+            $("#itemDetail" + order_list[i].itemId).on("click", function (e) {
+                alert(88)
+                window.location.href = "item_detail.html?id=" + $(this).data("id");
+            });
+        }
+        $(".item-list").append($(dom));
+
+	}
+
+
+
+</script>
+<script src="js/checkUser.js"></script>
+</html>
